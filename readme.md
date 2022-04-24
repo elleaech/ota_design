@@ -6,8 +6,8 @@
 - To visualize code flow: `main/main.c` and then follow routines
 
 - To build:
-```
-get_idf
+``` shell script
+get_idf         #alias get_idf='. $HOME/esp/esp-idf/export.sh'
 idf.py build
 ```
 
