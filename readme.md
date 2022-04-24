@@ -3,8 +3,9 @@
 
 ## GETTING STARTED
 -----------------
-To visualize code flow: `main/main.c` and follow routines
+- To visualize code flow: `main/main.c` and then follow routines
 
+- To build:
 ```
 get_idf
 idf.py build
