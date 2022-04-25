@@ -10,11 +10,3 @@
 get_idf         #alias get_idf='. $HOME/esp/esp-idf/export.sh'
 idf.py build
 ```
-
-## TO DO
------------------
-
-```
-FINISH      esp32.c
-CONFIGURE   lb_set_params_
-```
