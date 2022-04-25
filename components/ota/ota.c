@@ -43,7 +43,7 @@ struct ota_data
 int32_t
 lb_ota_init_params(NovusOTA **ota_data)
 {
-    int32_t rc = OK;
+    int32_t rc = OTA_OK;
 
     if (NULL != ota_data)
     {
@@ -55,12 +55,12 @@ lb_ota_init_params(NovusOTA **ota_data)
         }
         else
         {
-            rc = ERROR;
+            rc = OTA_ERROR;
         }
     }
     else
     {
-        rc = ERROR;
+        rc = OTA_ERROR;
     }
 
     return rc;
@@ -70,7 +70,7 @@ lb_ota_init_params(NovusOTA **ota_data)
 int32_t
 lb_ota_set_http_data(NovusOTA *ota_data, const char *url, const char *host, int16_t port)
 {
-    int32_t rc = OK;
+    int32_t rc = OTA_OK;
 
     if (NULL != ota_data && NULL != url && NULL != host)
     {
@@ -80,7 +80,7 @@ lb_ota_set_http_data(NovusOTA *ota_data, const char *url, const char *host, int1
     }
     else
     {
-        rc = ERROR;
+        rc = OTA_ERROR;
     }
 
     return rc;
@@ -90,7 +90,7 @@ lb_ota_set_http_data(NovusOTA *ota_data, const char *url, const char *host, int1
 int32_t
 lb_ota_set_ssl_data(NovusOTA *ota_data, const char *cert_pem, size_t cert_len)
 {
-    int32_t rc = OK;
+    int32_t rc = OTA_OK;
 
     if (NULL != ota_data && NULL != cert_pem)
     {
@@ -99,7 +99,7 @@ lb_ota_set_ssl_data(NovusOTA *ota_data, const char *cert_pem, size_t cert_len)
     }
     else
     {
-        rc = ERROR;
+        rc = OTA_ERROR;
     }
 
     return rc;
@@ -109,7 +109,7 @@ lb_ota_set_ssl_data(NovusOTA *ota_data, const char *cert_pem, size_t cert_len)
 int32_t
 lb_ota_set_auth_data(NovusOTA *ota_data, const char *username, const char *password)
 {
-    int32_t rc = OK;
+    int32_t rc = OTA_OK;
 
     if (NULL != ota_data && NULL != username && NULL != password)
     {
@@ -118,7 +118,7 @@ lb_ota_set_auth_data(NovusOTA *ota_data, const char *username, const char *passw
     }
     else
     {
-        rc = ERROR;
+        rc = OTA_ERROR;
     }
 
     return rc;
@@ -141,34 +141,32 @@ void lb_ota_destroy_params(NovusOTA **ota_data)
 int32_t
 lb_ota_update_firmware(NovusOTA *ota_data)
 {
-    int32_t rc = ERROR;
+    int32_t rc = OTA_OK;
 
-    /*
     if (NULL != ota_data)
     {
         lb_ota_begin();
 
-        if (OK == rc)
+        if (OTA_OK == rc)
         {
             lb_ota_perform();
         }
 
-        if (OK == rc)
+        if (OTA_OK == rc)
         {
             lb_ota_is_complete_data_received();
         }
 
-        if (OK == rc)
+        if (OTA_OK == rc)
         {
             lb_ota_get_img_desc();
         }
 
-        if (OK == rc)
+        if (OTA_OK == rc)
         {
             lb_ota_finish();
         }
     }
-    */
 
     return rc;
 }
