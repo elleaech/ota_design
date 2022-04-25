@@ -1,5 +1,9 @@
 #include "ota_template.h"
 
+#include <esp_err.h>
+#include <esp_log.h>
+#include <esp_system.h>
+
 /*
 esp_http_client_config_t config = {
     .url = CONFIG_FIRMWARE_UPGRADE_URL,
@@ -25,33 +29,38 @@ return ESP_OK;
 int32_t
 lb_ota_begin(void)
 {
-    //
+    ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
+    return ERROR;
 }
 
 /* ---------------------------------------------------------------------- */
 int32_t
 lb_ota_perform(void)
 {
-    //
+    ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
+    return ERROR;
 }
 
 /* ---------------------------------------------------------------------- */
 int32_t
 lb_ota_is_complete_data_received(void)
 {
-    //
+    ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
+    return ERROR;
 }
 
 /* ---------------------------------------------------------------------- */
 int32_t
 lb_ota_get_img_desc(void)
 {
-    //
+    ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
+    return ERROR;
 }
 
 /* ---------------------------------------------------------------------- */
 int32_t
 lb_ota_finish(void)
 {
-    //
+    ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
+    return ERROR;
 }

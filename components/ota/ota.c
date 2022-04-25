@@ -141,9 +141,8 @@ void lb_ota_destroy_params(NovusOTA **ota_data)
 int32_t
 lb_ota_update_firmware(NovusOTA *ota_data)
 {
-    int32_t rc = ERROR;
+    int32_t rc = OK;
 
-    /*
     if (NULL != ota_data)
     {
         lb_ota_begin();
@@ -168,7 +167,6 @@ lb_ota_update_firmware(NovusOTA *ota_data)
             lb_ota_finish();
         }
     }
-    */
 
     return rc;
 }
