@@ -1,5 +1,5 @@
-#include "ota_data.h"
 #include "ota.h"
+#include "esp32.h"
 
 /********************
  *    STRUCTS
