@@ -7,7 +7,7 @@
 static int32_t lb_set_params_(NovusOTA *ota_data);
 
 /* ---------------------------------------------------------------------- */
-int main(int argc, char **argv)
+void app_main(void)
 {
     int rc = OK;
 
@@ -26,8 +26,6 @@ int main(int argc, char **argv)
 
         lb_ota_destroy_params(&ota_data);
     }
-
-    return rc;
 }
 
 /* ---------------------------------------------------------------------- */

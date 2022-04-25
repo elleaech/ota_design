@@ -15,8 +15,6 @@ idf.py build
 -----------------
 
 ```
-ADD         include headers to CMakeLists
-ADD         source code files to CMakeLists
-FINISH      ota.c
+FINISH      esp32.c
 CONFIGURE   lb_set_params_
 ```
