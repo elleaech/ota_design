@@ -1,4 +1,4 @@
-#include "ota.h"
+#include "ota_template.h"
 
 /*
 esp_http_client_config_t config = {

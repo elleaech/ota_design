@@ -1,4 +1,5 @@
 #include "ota_data.h"
+#include "ota_template.h"
 #include "ota.h"
 
 /********************
@@ -140,8 +141,9 @@ void lb_ota_destroy_params(NovusOTA **ota_data)
 int32_t
 lb_ota_update_firmware(NovusOTA *ota_data)
 {
-    int32_t rc = OK;
+    int32_t rc = ERROR;
 
+    /*
     if (NULL != ota_data)
     {
         lb_ota_begin();
@@ -166,6 +168,7 @@ lb_ota_update_firmware(NovusOTA *ota_data)
             lb_ota_finish();
         }
     }
+    */
 
     return rc;
 }
