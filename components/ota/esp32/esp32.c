@@ -30,7 +30,7 @@ int32_t
 lb_ota_begin(void)
 {
     ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
-    return ERROR;
+    return OTA_ERROR;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -38,7 +38,7 @@ int32_t
 lb_ota_perform(void)
 {
     ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
-    return ERROR;
+    return OTA_ERROR;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -46,7 +46,7 @@ int32_t
 lb_ota_is_complete_data_received(void)
 {
     ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
-    return ERROR;
+    return OTA_ERROR;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -54,7 +54,7 @@ int32_t
 lb_ota_get_img_desc(void)
 {
     ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
-    return ERROR;
+    return OTA_ERROR;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -62,5 +62,5 @@ int32_t
 lb_ota_finish(void)
 {
     ESP_LOGI(__FUNCTION__, "[%s]", __FUNCTION__);
-    return ERROR;
+    return OTA_ERROR;
 }

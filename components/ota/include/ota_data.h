@@ -5,8 +5,8 @@
 #include <inttypes.h>
 #include <string.h>
 
-#define OK 0
-#define ERROR -1
+#define OTA_OK 0
+#define OTA_ERROR -1
 
 typedef struct ota_data NovusOTA;
 
