@@ -15,6 +15,5 @@ idf.py build
 -----------------
 
 ```
-FINISH      esp32.c
 CONFIGURE   lb_set_params_
 ```
