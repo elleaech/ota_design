@@ -1,5 +1,4 @@
 #include "ota_data.h"
-#include "ota.h"
 
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,11 +1,5 @@
 #include "ota.h"
 
-#include <esp_err.h>
-#include <esp_log.h>
-#include <esp_system.h>
-#include <esp_http_client.h>
-#include <esp_https_ota.h>
-
 /*
 esp_http_client_config_t config = {
     .url = CONFIG_FIRMWARE_UPGRADE_URL,

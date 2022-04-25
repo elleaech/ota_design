@@ -163,7 +163,7 @@ lb_ota_update_firmware(NovusOTA *ota_data)
 
         if (OK == rc)
         {
-            lb_ota_ota_finish();
+            lb_ota_finish();
         }
     }
 
