@@ -7,7 +7,9 @@
 /* ---------------------------------------------------------------------- */
 void app_main(void)
 {
-    int rc = lb_ota_update_firmware_perform(NULL, NULL, NULL);
+    HTTP http_data = {
+        .url = "",
+    };
 
-    lb_ota_update_firmware_finish(rc);
+    lb_ota_update_firmware_perform(&http_data, NULL, NULL);
 }
