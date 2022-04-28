@@ -5,18 +5,19 @@
 -----------------
 
 ```shell script
-get_idf         #alias get_idf='. $HOME/esp/esp-idf/export.sh'
+alias get_idf='. $HOME/esp/esp-idf/export.sh
+get_idf
 ```
 
-### Configure partitions
+### SDK Configurations
 
-- Enable `Custom partition table CSV` in `idf.py menuconfig`
+- Enable `Partition Table -> Partition Table -> Custom partition table CSV` in `idf.py menuconfig`
+- Enable `Component config -> ESP HTTPS OTA -> Allow HTTP for OTA` in `idf.py menuconfig` (for tests only)
 
 ### Build
 
 - `idf.py build`
 
-### Configure sdk
+#### Using VSCode extension
 
-- If not using HTTPS, add the following line below `ESP HTTPS OTA` in `sdkconfig`, and build again:
-`CONFIG_OTA_ALLOW_HTTP=y`
+`F1 -> ESP-IDF: Build, Flash and start a monitor on your device`
