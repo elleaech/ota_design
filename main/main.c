@@ -153,10 +153,5 @@ void app_main(void)
         .url = "http://192.168.1.6:80/Logbox_Wifi_OTA_V1.33.fw",
     };
 
-    SSL ssl_data = {
-        .cert_pem = "",
-        .cert_len = 1,
-    };
-
-    lb_ota_update_firmware_perform(&http_data, NULL, &ssl_data);
+    lb_ota_update_firmware_perform(&http_data, NULL, NULL);
 }
