@@ -3,7 +3,7 @@
 
 #include "wifi_station.h"
 
-#define EXAMPLE_ESP_OTA_URL        "http://192.168.1.6:80/Logbox_Wifi_OTA_V1.33.fw"
+#define EXAMPLE_ESP_OTA_URL        "http://192.168.1.6:80/esp-at.bin"
 
 
 /* ---------------------------------------------------------------------- */
