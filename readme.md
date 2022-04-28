@@ -12,10 +12,11 @@ get_idf         #alias get_idf='. $HOME/esp/esp-idf/export.sh'
 
 - Enable `Custom partition table CSV` in `idf.py menuconfig`
 
-### Configure sdk
-
-- Copy 'sdkconfig.template' as `sdkconfig` at the repository root directory
-
 ### Build
 
 - `idf.py build`
+
+### Configure sdk
+
+- If not using HTTPS, add the following line below `ESP HTTPS OTA` in `sdkconfig`, and build again:
+`CONFIG_OTA_ALLOW_HTTP=y`
