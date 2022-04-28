@@ -30,6 +30,7 @@
 */
 #define EXAMPLE_ESP_WIFI_SSID      "ANALU OI FIBRA"
 #define EXAMPLE_ESP_WIFI_PASS      "Analu272409"
+#define EXAMPLE_ESP_OTA_URL        "http://192.168.1.6:80/Logbox_Wifi_OTA_V1.33.fw"
 #define EXAMPLE_ESP_MAXIMUM_RETRY  10
 
 /* FreeRTOS event group to signal when we are connected*/
@@ -150,7 +151,7 @@ void app_main(void)
     wifi_init_sta();
 
     HTTP http_data = {
-        .url = "http://192.168.1.6:80/Logbox_Wifi_OTA_V1.33.fw",
+        .url = EXAMPLE_ESP_OTA_URL,
     };
 
     lb_ota_update_firmware_perform(&http_data, NULL, NULL);
