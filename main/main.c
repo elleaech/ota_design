@@ -4,7 +4,7 @@
 #include "wifi_station.h"
 #include <inttypes.h>
 
-#define EXAMPLE_ESP_OTA_URL        "http://192.168.1.6:80/esp-at.bin"
+#define EXAMPLE_ESP_OTA_URL        "http://192.168.1.6:80/factory_WROOM-32.bin"
 
 
 /* ---------------------------------------------------------------------- */

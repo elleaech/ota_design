@@ -9,10 +9,9 @@ alias get_idf='. $HOME/esp/esp-idf/export.sh
 get_idf
 ```
 
-### SDK Configurations
+### SDK Configurations (for tests only)
 
-- Enable `Partition Table -> Partition Table -> Custom partition table CSV` in `idf.py menuconfig`
-- Enable `Component config -> ESP HTTPS OTA -> Allow HTTP for OTA` in `idf.py menuconfig` (for tests only)
+- Enable `Component config -> ESP HTTPS OTA -> Allow HTTP for OTA` in `idf.py menuconfig`
 
 ### Build
 
