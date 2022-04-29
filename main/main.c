@@ -10,8 +10,16 @@
 /* ---------------------------------------------------------------------- */
 void app_main(void)
 {
+    const char *TAG = "OTA MAIN";
+    esp_err_t ret = ESP_FAIL;
+    int32_t rc = OTA_ERROR;
+
+    HTTP http_data = {
+        .url = EXAMPLE_ESP_OTA_URL,
+    };
+
     //Initialize NVS
-    esp_err_t ret = nvs_flash_init();
+    ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND) {
       ESP_ERROR_CHECK(nvs_flash_erase());
       ret = nvs_flash_init();
@@ -20,10 +28,9 @@ void app_main(void)
 
     wifi_init_sta();
 
-    HTTP http_data = {
-        .url = EXAMPLE_ESP_OTA_URL,
-    };
+    ESP_LOGI(TAG, "Starting OTA example");
+    ESP_LOGI(TAG, "Attempting to download update from %s", config.url);
 
-    int32_t rc = lb_ota_update_firmware_perform(&http_data, NULL, NULL);
+    rc = lb_ota_update_firmware_perform(&http_data, NULL, NULL);
     lb_ota_update_firmware_finish(rc);
 }
