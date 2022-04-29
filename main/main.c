@@ -2,6 +2,7 @@
 #include "ota.h"
 
 #include "wifi_station.h"
+#include <inttypes.h>
 
 #define EXAMPLE_ESP_OTA_URL        "http://192.168.1.6:80/esp-at.bin"
 
@@ -23,5 +24,6 @@ void app_main(void)
         .url = EXAMPLE_ESP_OTA_URL,
     };
 
-    lb_ota_update_firmware_perform(&http_data, NULL, NULL);
+    int32_t rc = lb_ota_update_firmware_perform(&http_data, NULL, NULL);
+    lb_ota_update_firmware_finish(rc);
 }
