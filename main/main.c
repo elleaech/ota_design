@@ -3,6 +3,7 @@
 
 #include "wifi_station.h"
 #include <inttypes.h>
+#include <esp_log.h>
 
 #define EXAMPLE_ESP_OTA_URL        "http://192.168.1.6:80/factory_WROOM-32.bin"
 
@@ -29,7 +30,7 @@ void app_main(void)
     wifi_init_sta();
 
     ESP_LOGI(TAG, "Starting OTA example");
-    ESP_LOGI(TAG, "Attempting to download update from %s", config.url);
+    ESP_LOGI(TAG, "Attempting to download update from %s", http_data.url);
 
     rc = lb_ota_update_firmware_perform(&http_data, NULL, NULL);
     lb_ota_update_firmware_finish(rc);
