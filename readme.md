@@ -11,6 +11,7 @@ get_idf
 
 ### SDK Configurations (for tests only)
 
+- Enable `Partition Table -> Partition Table -> Factory app, two OTA definitions`
 - Enable `Component config -> ESP HTTPS OTA -> Allow HTTP for OTA` in `idf.py menuconfig`
 
 ### Build
