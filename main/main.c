@@ -11,7 +11,6 @@
 /* ---------------------------------------------------------------------- */
 void app_main(void)
 {
-    const char *TAG = "OTA MAIN";
     esp_err_t ret = ESP_FAIL;
     int32_t rc = OTA_ERROR;
 
@@ -28,9 +27,6 @@ void app_main(void)
     ESP_ERROR_CHECK(ret);
 
     wifi_init_sta();
-
-    ESP_LOGI(TAG, "Starting OTA example");
-    ESP_LOGI(TAG, "Attempting to download update from %s", http_data.url);
 
     rc = lb_ota_update_firmware_perform(&http_data, NULL, NULL);
     lb_ota_update_firmware_finish(rc);
