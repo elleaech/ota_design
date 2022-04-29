@@ -5,7 +5,7 @@
 #include <inttypes.h>
 #include <esp_log.h>
 
-#define EXAMPLE_ESP_OTA_URL        "http://192.168.1.6:80/factory_WROOM-32.bin"
+#define EXAMPLE_ESP_OTA_URL        "http://192.168.1.6:80/factory/factory_WROOM-32.bin"
 
 
 /* ---------------------------------------------------------------------- */
