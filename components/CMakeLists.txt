@@ -1,5 +1,5 @@
 set (LIB "ota_lib")
-set (PLATFORM "esp32")
+set (PLATFORM "esp32_http")
 
 idf_component_register(SRCS ${LIB}/${PLATFORM}/ota.c
                             ${LIB}/${PLATFORM}/ota_log.c
